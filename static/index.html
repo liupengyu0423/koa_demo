@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css
+    ">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <div class="banner">
+            <h1>代办事项</h1>
+            <div>
+                <ul>
+                    <li>
+                        <span>第一项</span>
+                        <span>✓</span>
+                    </li>
+                    <li>
+                        <span>第二项</span>
+                        <span>x</span>
+                    </li>
+                    <li>
+                        <span>第三项</span>
+                        <span>✓</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                  
+                    <button>
+                       添加
+                    </button>
+            </div>
+           
+    </div>
+   
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $("button").on("click",function(){
+        $.ajax({
+        method:'post',
+        url:"/test",
+        data:{firstName:'lili',lastName:'green'},
+        success:function(data){
+            console.log(data);
+        }
+    })
+    })
+   var arr = [1,2,3,4];
+   var newarr = arr.filter(function (x) {
+       return x % 2 !== 0;
+   })
+   console.log(newarr);
+</script>
